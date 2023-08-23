@@ -21,15 +21,20 @@ public class CurvePointTests {
 
 	@Test
 	public void curvePointTest() {
-		CurvePoint curvePoint = new CurvePoint(10, 10d, 30d);
+		//CurvePoint curvePoint = new CurvePoint((byte) 10, 10d, 30d);
+		CurvePoint curvePoint = new CurvePoint();
+		curvePoint.setCurveId(10);
+		curvePoint.setTerm(10.0);
+		curvePoint.setValue(30.0);
 
 		// Save
 		curvePoint = curvePointRepository.save(curvePoint);
 		Assert.assertNotNull(curvePoint.getId());
-		Assert.assertTrue(curvePoint.getCurveId() == 10);
+		Assert.assertTrue(curvePoint.getCurveId() == 10d);
 
 		// Update
-		curvePoint.setCurveId(20);
+		//curvePoint.setCurveId((byte) 20);
+		curvePoint.setCurveId( 20);
 		curvePoint = curvePointRepository.save(curvePoint);
 		Assert.assertTrue(curvePoint.getCurveId() == 20);
 
@@ -38,8 +43,9 @@ public class CurvePointTests {
 		Assert.assertTrue(listResult.size() > 0);
 
 		// Delete
-		Integer id = curvePoint.getId();
+		int id = curvePoint.getId();
 		curvePointRepository.delete(curvePoint);
+		//Optional<CurvePoint> curvePointList = curvePointRepository.findById(Integer.valueOf(id));
 		Optional<CurvePoint> curvePointList = curvePointRepository.findById(id);
 		Assert.assertFalse(curvePointList.isPresent());
 	}
