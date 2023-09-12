@@ -5,6 +5,8 @@ import com.nnk.springboot.repositories.BidListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -21,8 +23,10 @@ public class BidServiceImpl implements BidService{
     public void save(BidList bid) {
         BidList bidListToSave = new BidList();
         bidListToSave.setAccount(bid.getAccount());
-        bidListToSave.setType(bid.getAccount());
+        bidListToSave.setType(bid.getType());
         bidListToSave.setBidQuantity(bid.getBidQuantity());
+        bidListToSave.setCreationDate(Timestamp.valueOf(LocalDateTime.now()));
+        bidListToSave.setRevisionDate(Timestamp.valueOf(LocalDateTime.now()));
         bidListRepository.save(bidListToSave);
     }
 
@@ -34,6 +38,7 @@ public class BidServiceImpl implements BidService{
     @Override
     public BidList update(Integer id, BidList bidList) {
         BidList bidListToSave = bidListRepository.findById(id).orElseThrow(() -> new RuntimeException("Bid List doen't exist"));
+        bidListToSave.setRevisionDate(Timestamp.valueOf(LocalDateTime.now()));
         return (bidListRepository.save(bidList));
     }
 

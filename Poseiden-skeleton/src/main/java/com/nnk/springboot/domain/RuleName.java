@@ -14,7 +14,7 @@ public class RuleName {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     //private Byte Id;
-    private int Id;
+    private int id;
     private String name;
     private String description;
     private String json;

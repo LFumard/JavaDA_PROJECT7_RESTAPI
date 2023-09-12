@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 
 @Entity
@@ -17,7 +17,7 @@ public class Trade {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     //private Byte TradeId;
-    private int TradeId;
+    private Integer tradeId;
     @NotBlank(message = "Account is mandatory")
     private String account;
     @NotBlank(message = "Type is mandatory")
@@ -26,16 +26,16 @@ public class Trade {
     private double sellQuantity;
     private double buyPrice;
     private double sellPrice;
-    private Date tradeDate;
+    private Timestamp tradeDate;
     private String security;
     private String status;
     private String trader;
     private String benchmark;
     private String book;
     private String creationName;
-    private Date creationDate;
+    private Timestamp creationDate;
     private String revisionName;
-    private Date revisionDate;
+    private Timestamp revisionDate;
     private String dealName;
     private String dealType;
     private String sourceListId;

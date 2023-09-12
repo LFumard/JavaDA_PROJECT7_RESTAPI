@@ -49,7 +49,8 @@ public class RatingController {
 
         model.addAttribute("rating",ratingService.save(rating));
         logger.info("New request Post Mapping : Add new Rating : " + result);
-        return "rating/add";
+        //return "rating/add";
+        return "redirect:/rating/list";
     }
 
     @GetMapping("/rating/update/{id}")

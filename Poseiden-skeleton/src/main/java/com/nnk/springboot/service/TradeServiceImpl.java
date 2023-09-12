@@ -5,8 +5,9 @@ import com.nnk.springboot.repositories.TradeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TradeServiceImpl implements TradeService{
@@ -21,17 +22,22 @@ public class TradeServiceImpl implements TradeService{
 
     @Override
     public List<Trade> save(Trade trade) {
+        Trade tradeToSave = new Trade();
+        tradeToSave.setRevisionDate(Timestamp.valueOf(LocalDateTime.now()));
+        tradeToSave.setCreationDate(Timestamp.valueOf(LocalDateTime.now()));
+        tradeToSave.setTradeDate(Timestamp.valueOf(LocalDateTime.now()));
         tradeRepository.save(trade);
         return tradeRepository.findAll();
     }
 
     @Override
-    public Optional<Trade> findById(Integer id) {
-        return tradeRepository.findById(id);
+    public Trade findById(Integer id) {
+        return tradeRepository.findById(id).orElseThrow(() ->new IllegalArgumentException("Invalid Id Trade : " + id));
     }
 
     @Override
     public List<Trade> update(Trade trade) {
+        trade.setRevisionDate(Timestamp.valueOf(LocalDateTime.now()));
         tradeRepository.save(trade);
         return tradeRepository.findAll();
     }

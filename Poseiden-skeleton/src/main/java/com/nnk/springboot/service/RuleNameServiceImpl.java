@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class RuleNameServiceImpl implements RuleNameService{
@@ -26,8 +25,8 @@ public class RuleNameServiceImpl implements RuleNameService{
     }
 
     @Override
-    public Optional<RuleName> findById(Integer id) {
-        return ruleNameRepository.findById(id);
+    public RuleName findById(Integer id) {
+        return ruleNameRepository.findById(id).orElseThrow(() ->new IllegalArgumentException("Invalid Id Rule Name : " + id));
     }
 
     @Override

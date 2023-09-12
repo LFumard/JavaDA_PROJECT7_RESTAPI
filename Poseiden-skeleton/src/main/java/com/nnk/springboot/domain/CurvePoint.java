@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 
 @Entity
@@ -15,14 +15,13 @@ public class CurvePoint {
     // TODO: Map columns in data table CURVEPOINT with corresponding java fields
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    //private Byte Id;
-    private int id;
+    private Integer id;
     @Column(name = "CurveId")
     private int curveId;
-    private Date asOfDate;
+    private Timestamp asOfDate;
     private double term;
     private double value;
-    private Date creationDate;
+    private Timestamp creationDate;
 
     public CurvePoint(int curveId, double term, double value) {
         this.id = curveId; this.term = term; this.value = value;

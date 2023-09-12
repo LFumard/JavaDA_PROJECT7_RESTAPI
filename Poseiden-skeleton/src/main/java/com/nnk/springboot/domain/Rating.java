@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Positive;
 
 @Entity
 @Getter
@@ -14,14 +15,15 @@ public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     //private Byte Id;
-    private int id;
+    private Integer id;
     private String moodysRating;
     private String sandPRating;
     private String fitchRating;
     //private Byte orderNumber;
-    private int orderNumber;
+    @Positive
+    private Integer orderNumber;
 
-    public Rating(String moodysRating, String sandPRating, String fitchRating, int orderNumber) {
+    public Rating(String moodysRating, String sandPRating, String fitchRating, Integer orderNumber) {
         this.moodysRating = moodysRating; this .sandPRating = sandPRating; this.fitchRating = fitchRating; this.orderNumber = orderNumber;
     }
     public Rating() {
