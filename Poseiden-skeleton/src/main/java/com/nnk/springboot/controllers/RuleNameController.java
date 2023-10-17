@@ -8,13 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@SessionAttributes("userInfo")
 @Controller
 public class RuleNameController {
     private static final Logger logger = LogManager.getLogger("RuleNameController");
@@ -22,6 +20,12 @@ public class RuleNameController {
     // TODO: Inject RuleName service
     @Autowired
     RuleNameService ruleNameService;
+
+    /**
+     * Affiche la list template ruleName
+     * @param model Class Model
+     * @return la ruleName template
+     */
     @RequestMapping("/ruleName/list")
     public String home(Model model)
     {
@@ -31,13 +35,25 @@ public class RuleNameController {
         return "ruleName/list";
     }
 
+    /**
+     * Affiche la form template ruleName
+     * @param ruleName Class ruleName
+     * @return la template d'ajout de ruleName
+     */
     @GetMapping("/ruleName/add")
-    public String addRuleForm(RuleName bid) {
+    public String addRuleForm(RuleName ruleName) {
 
         logger.info("New request Get Mapping : show form to add new rule");
         return "ruleName/add";
     }
 
+    /**
+     * Ajout d'une nouvelle ruleName
+     * @param ruleName à ajouter
+     * @param result état de la ruleName à ajouter
+     * @param model Class Model
+     * @return la list template si la ruleName est correct, la form template ruleName sinon
+     */
     @PostMapping("/ruleName/validate")
     public String validate(@Valid RuleName ruleName, BindingResult result, Model model) {
         // TODO: check data valid and save to db, after saving return RuleName list
@@ -45,12 +61,18 @@ public class RuleNameController {
             logger.error("New request Post Mapping : ERROR add new rule : " + result);
             return "ruleName/add";
         }
-
-        model.addAttribute("ruleName",ruleNameService.save(ruleName));
+        ruleNameService.save(ruleName);
+        model.addAttribute("ruleName",ruleNameService.findAll());
         logger.info("New request Post Mapping : Add new rule : " + result);
         return "redirect:/ruleName/list";
     }
 
+    /**
+     * Affichage d'une ruleName pour modification
+     * @param id de la ruleName à modifier
+     * @param model Class Model
+     * @return la template de modification de ruleName
+     */
     @GetMapping("/ruleName/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         // TODO: get RuleName by Id and to model then show to the form
@@ -59,6 +81,14 @@ public class RuleNameController {
         return "ruleName/update";
     }
 
+    /**
+     * Mise à jour d'une ruleName
+     * @param id de la ruleName à modifier
+     * @param ruleName contenu de la nouvelle Bid
+     * @param result état de la ruleName à modifier
+     * @param model Class Model
+     * @return la template List ruleName si la ruleName en paramètre est valide, la form ruleName sinon
+     */
     @PostMapping("/ruleName/update/{id}")
     public String updateRuleName(@PathVariable("id") Integer id, @Valid RuleName ruleName,
                              BindingResult result, Model model) {
@@ -69,14 +99,21 @@ public class RuleNameController {
         }
 
         logger.info("New request Post Mapping : update rule : " + id);
-        model.addAttribute("ruleNames", ruleNameService.update(ruleName));
+        ruleNameService.update(ruleName);
+        model.addAttribute("ruleNames", ruleNameService.findAll());
         return "redirect:/ruleName/list";
     }
 
+    /**
+     * Suppression d'une ruleName
+     * @param id de la ruleName à supprimer
+     * @param model Class Model
+     * @return la template list des ruleName
+     */
     @GetMapping("/ruleName/delete/{id}")
     public String deleteRuleName(@PathVariable("id") Integer id, Model model) {
-        // TODO: Find RuleName by Id and delete the RuleName, return to Rule list
-        model.addAttribute("ruleNames", ruleNameService.delete(id));
+        ruleNameService.delete(id);
+        model.addAttribute("ruleNames", ruleNameService.findAll());
         logger.info("New request Get Mapping : delete rule : " + id);
         return "redirect:/ruleName/list";
     }

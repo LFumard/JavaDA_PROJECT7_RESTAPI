@@ -7,11 +7,11 @@ import java.util.List;
 public interface RatingService {
     List<Rating> findAll();
 
-    List<Rating> save(Rating rating);
+    void save(Rating rating);
 
     Rating findById(Integer id);
 
     Rating update(Integer id, Rating rating);
 
-    List<Rating> delete(Integer id);
+    void delete(Integer id);
 }

@@ -38,7 +38,6 @@ public class RuleTests {
 		Assert.assertTrue(listResult.size() > 0);
 
 		// Delete
-		//Integer id = Integer.valueOf(rule.getId());
 		int id = rule.getId();
 		ruleNameRepository.delete(rule);
 		Optional<RuleName> ruleList = ruleNameRepository.findById(id);

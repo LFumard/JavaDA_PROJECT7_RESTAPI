@@ -8,24 +8,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@SessionAttributes("userInfo")
 @Controller
 public class CurveController {
     // TODO: Inject Curve Point service
 
     private static final Logger logger = LogManager.getLogger("CurveController");
 
-/*    @Autowired
-    CurvePointRepository curvePointRepository;*/
-
     @Autowired
     CurvePointService curvePointService;
+
+    /**
+     * Affiche la list template CurvePoint
+     * @param model Class Model
+     * @return la list template CurvePoint
+     */
     @RequestMapping("/curvePoint/list")
     public String home(Model model)
     {
@@ -36,6 +37,11 @@ public class CurveController {
         return "curvePoint/list";
     }
 
+    /**
+     * Affiche la form template curvePoint
+     * @param bid Class curvePoint
+     * @return la template d'ajout de curvePoint
+     */
     @GetMapping("/curvePoint/add")
     public String addBidForm(CurvePoint bid) {
 
@@ -43,6 +49,13 @@ public class CurveController {
         return "curvePoint/add";
     }
 
+    /**
+     * Ajout d'un nouveau curvePoint
+     * @param curvePoint à ajouter
+     * @param result état du curvePoint à ajouter
+     * @param model Class Model
+     * @return la list curvePoint si le curvePoint est correct, la form template curvePoint sinon
+     */
     @PostMapping("/curvePoint/validate")
     public String validate(@Valid CurvePoint curvePoint, BindingResult result, Model model) {
         // TODO: check data valid and save to db, after saving return Curve list
@@ -59,6 +72,12 @@ public class CurveController {
         return "redirect:/curvePoint/list";
     }
 
+    /**
+     * Affichage d'un curvePoint pour modification
+     * @param id du curvePoint à modifier
+     * @param model Class Model
+     * @return la template de modification de curvePoint
+     */
     @GetMapping("/curvePoint/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         // TODO: get CurvePoint by Id and to model then show to the form
@@ -67,6 +86,14 @@ public class CurveController {
         return "curvePoint/update";
     }
 
+    /**
+     * Mise à jour d'un curvePoint
+     * @param id du curvePoint à modifier
+     * @param curvePoint contenu du nouveau curvePoint
+     * @param result état du curvePoint à modifier
+     * @param model Class Model
+     * @return la template List curvePoint si le curvePoint en paramètre est valide, la form curvePoint sinon
+     */
     @PostMapping("/curvePoint/update/{id}")
     public String updateBid(@PathVariable("id") Integer id, @Valid CurvePoint curvePoint,
                              BindingResult result, Model model) {
@@ -82,6 +109,12 @@ public class CurveController {
         return "redirect:/curvePoint/list";
     }
 
+    /**
+     * Suppression d'un curvePoint
+     * @param id du curvePoint à supprimer
+     * @param model Class Model
+     * @return la template list des curvePoint
+     */
     @GetMapping("/curvePoint/delete/{id}")
     public String deleteBid(@PathVariable("id") Integer id, Model model) {
         // TODO: Find Curve by Id and delete the Curve, return to Curve list

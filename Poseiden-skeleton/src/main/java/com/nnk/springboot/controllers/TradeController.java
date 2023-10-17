@@ -8,13 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@SessionAttributes("userInfo")
 @Controller
 public class TradeController {
 
@@ -22,6 +20,12 @@ public class TradeController {
     // TODO: Inject Trade service
     @Autowired
     TradeService tradeService;
+
+    /**
+     * Affiche la list template trade
+     * @param model Class Model
+     * @return la list template trade
+     */
     @RequestMapping("/trade/list")
     public String home(Model model)
     {
@@ -31,13 +35,25 @@ public class TradeController {
         return "trade/list";
     }
 
+    /**
+     * Affiche la form template trade
+     * @param trade Class trade
+     * @return la template d'ajout de trade
+     */
     @GetMapping("/trade/add")
-    public String addUser(Trade bid) {
+    public String addTrade(Trade trade) {
 
         logger.info("New request Get Mapping : show form to add new trade");
         return "trade/add";
     }
 
+    /**
+     * Ajout d'un nouveau trade
+     * @param trade à ajouter
+     * @param result état du trade à ajouter
+     * @param model Class Model
+     * @return la list trade si le trade est correct, la form template trade sinon
+     */
     @PostMapping("/trade/validate")
     public String validate(@Valid Trade trade, BindingResult result, Model model) {
         // TODO: check data valid and save to db, after saving return Trade list
@@ -45,12 +61,18 @@ public class TradeController {
             logger.error("New request Post Mapping : ERROR add new trade : " + result);
             return "trade/add";
         }
-
-        model.addAttribute("trades",tradeService.save(trade));
+        tradeService.save(trade);
+        model.addAttribute("trades",tradeService.findAll());
         logger.info("New request Post Mapping : Add new trade : " + result);
-        return "trade/add";
+        return "redirect:/trade/list";
     }
 
+    /**
+     * Affichage d'un trade pour modification
+     * @param id du trade à modifier
+     * @param model Class Model
+     * @return la template de modification de trade
+     */
     @GetMapping("/trade/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         // TODO: get Trade by Id and to model then show to the form
@@ -59,6 +81,14 @@ public class TradeController {
         return "trade/update";
     }
 
+    /**
+     * Mise à jour d'un trade
+     * @param id du trade à modifier
+     * @param trade contenu du nouveau trade
+     * @param result état du trade à modifier
+     * @param model Class Model
+     * @return la template List trade si le trade en paramètre est valide, la form trade sinon
+     */
     @PostMapping("/trade/update/{id}")
     public String updateTrade(@PathVariable("id") Integer id, @Valid Trade trade,
                              BindingResult result, Model model) {
@@ -69,14 +99,21 @@ public class TradeController {
         }
 
         logger.info("New request Post Mapping : update trade : " + id);
-        model.addAttribute("trades", tradeService.update(trade));
+        tradeService.update(trade);
+        model.addAttribute("trades", tradeService.findAll());
         return "redirect:/trade/list";
     }
 
+    /**
+     * Suppression d'un trade
+     * @param id du trade à supprimer
+     * @param model Class Model
+     * @return la template list des trade
+     */
     @GetMapping("/trade/delete/{id}")
     public String deleteTrade(@PathVariable("id") Integer id, Model model) {
-        // TODO: Find Trade by Id and delete the Trade, return to Trade list
-        model.addAttribute("trades", tradeService.delete(id));
+        tradeService.delete(id);
+        model.addAttribute("trades", tradeService.findAll());
         logger.info("New request Get Mapping : delete trade : " + id);
         return "redirect:/trade/list";
     }

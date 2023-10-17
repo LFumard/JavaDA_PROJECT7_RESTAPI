@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.util.Collection;
 
 @Entity
@@ -32,6 +33,8 @@ public class User implements UserDetails {
     private Integer id;
     @NotBlank(message = "Username is mandatory")
     private String username;
+    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#!?$%^&+=])(?=\\S+$).{8,}$",
+            message = "Le mot de passe doit contenir au moins huit caractères dont au moins une minuscule, une majuscule, un nombre et un caractère spécial")
     @NotBlank(message = "Password is mandatory")
     private String password;
     @NotBlank(message = "FullName is mandatory")

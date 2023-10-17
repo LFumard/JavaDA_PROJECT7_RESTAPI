@@ -21,7 +21,6 @@ public class RatingTests {
 
 	@Test
 	public void ratingTest() {
-		//Rating rating = new Rating("Moodys Rating", "Sand PRating", "Fitch Rating", (byte) 10);
 		Rating rating = new Rating("Moodys Rating", "Sand PRating", "Fitch Rating", 10);
 
 		// Save
@@ -30,7 +29,6 @@ public class RatingTests {
 		Assert.assertTrue(rating.getOrderNumber() == 10);
 
 		// Update
-		//rating.setOrderNumber((byte) 20);
 		rating.setOrderNumber(20);
 		rating = ratingRepository.save(rating);
 		Assert.assertTrue(rating.getOrderNumber() == 20);
@@ -40,7 +38,6 @@ public class RatingTests {
 		Assert.assertTrue(listResult.size() > 0);
 
 		// Delete
-		//Integer id = Integer.valueOf(rating.getId());
 		int id = rating.getId();
 		ratingRepository.delete(rating);
 		Optional<Rating> ratingList = ratingRepository.findById(id);

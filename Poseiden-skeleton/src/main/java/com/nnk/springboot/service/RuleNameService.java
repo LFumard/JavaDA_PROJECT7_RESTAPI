@@ -7,11 +7,11 @@ import java.util.List;
 public interface RuleNameService {
     List<RuleName> findAll();
 
-    List<RuleName> save(RuleName ruleName);
+    void save(RuleName ruleName);
 
     RuleName findById(Integer id);
 
-    List<RuleName> update(RuleName ruleName);
+    void update(RuleName ruleName);
 
-    List<RuleName> delete(Integer id);
+    void delete(Integer id);
 }

@@ -7,11 +7,11 @@ import java.util.List;
 public interface TradeService {
     List<Trade> findAll();
 
-    List<Trade> save(Trade trade);
+    void save(Trade trade);
 
     Trade findById(Integer id);
 
-    List<Trade> update(Trade trade);
+    void update(Trade trade);
 
-    List<Trade> delete(Integer id);
+    void delete(Integer id);
 }
