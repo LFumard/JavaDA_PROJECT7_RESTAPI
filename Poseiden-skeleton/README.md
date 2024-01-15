@@ -25,3 +25,7 @@
 ## Security
 1. Create user service to load user from  database and place in package com.nnk.springboot.services
 2. Add configuration class and place in package com.nnk.springboot.config
+
+## Add On
+1. Login/User Password Application : Admin/UserPoseidon01!
+2. Login/Admin Password Application : Admin/AdminPoseidon01!
