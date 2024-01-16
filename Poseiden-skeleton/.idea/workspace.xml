@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7b637dfd-959c-4cf5-a0f9-2ae5009d3be4" name="Changes" comment="Correction 5 objets métiers" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\A118VY\OneDrive - AXA\Documents\GitHub\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\htmlReport" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="module-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b4db1cf1-5b41-4c64-90e8-5d054bfcb7f7" />
+        <option name="url" value="https://github.com/LFumard/JavaDA_PROJECT7_RESTAPI.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="springboot in spring-boot-skeleton" />
+    </enabled-run-configurations>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2ThiSfVZSmJPMN5VcWRlTDQDCfi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/A118VY/OneDrive - AXA/Documents/GitHub/JavaDA_PROJECT7_RESTAPI/Poseiden-skeleton",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.nnk.springboot.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\A118VY\OneDrive - AXA\Documents\GitHub\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\resources\templates" />
+      <recent name="C:\Users\A118VY\OneDrive - AXA\Documents\GitHub\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\test\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\A118VY\OneDrive - AXA\Documents\GitHub\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\resources\templates\error" />
+      <recent name="C:\Users\A118VY\OneDrive - AXA\Documents\GitHub\JavaDA_PROJECT7_RESTAPI\Poseiden-skeleton\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nnk.springboot.Application" />
+      <module name="spring-boot-skeleton" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nnk.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BidTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-skeleton" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nnk.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nnk.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.nnk.springboot.BidTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.nnk.springboot in spring-boot-skeleton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-skeleton" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nnk.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nnk.springboot" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in spring-boot-skeleton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-skeleton" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="springboot in spring-boot-skeleton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-skeleton" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/nnk/springboot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Poseiden-skeleton" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Poseiden-skeleton" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.com.nnk.springboot in spring-boot-skeleton" />
+      <item itemvalue="JUnit.BidTests" />
+      <item itemvalue="JUnit.java in spring-boot-skeleton" />
+      <item itemvalue="JUnit.springboot in spring-boot-skeleton" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.com.nnk.springboot in spring-boot-skeleton" />
+        <item itemvalue="JUnit.BidTests" />
+        <item itemvalue="JUnit.springboot in spring-boot-skeleton" />
+        <item itemvalue="JUnit.java in spring-boot-skeleton" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b637dfd-959c-4cf5-a0f9-2ae5009d3be4" name="Changes" comment="" />
+      <created>1691501715148</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691501715148</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Correction 5 objets métiers">
+      <created>1694536083582</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694536083582</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Correction 5 objets métiers">
+      <created>1705336873849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705336873849</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Correction 5 objets métiers">
+      <created>1705401263798</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705401263798</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Correction 5 objets métiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction 5 objets métiers" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/nnk/springboot/CurvePointTests.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/UserController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/CurveController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/BidListController.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/RatingController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/service/RatingServiceImpl.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/RatingController.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/TradeController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/RatingController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/UserController.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/UserController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/HomeController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nnk/springboot/controllers/HomeController.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.expression.spel.SpelEvaluationException" package="org.springframework.expression.spel" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="27" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Poseiden_skeleton$springboot_in_spring_boot_skeleton.ic" NAME="springboot in spring-boot-skeleton Coverage Results" MODIFIED="1705323289185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Poseiden_skeleton$TradeTests_tradeTest.ic" NAME="TradeTests.tradeTest Coverage Results" MODIFIED="1692519841988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.nnk.springboot.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Poseiden_skeleton$Application.ic" NAME="Application Coverage Results" MODIFIED="1693910042056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.nnk.springboot.*</FILTER>
+    </SUITE>
+  </component>
+</project>
