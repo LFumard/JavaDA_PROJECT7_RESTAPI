@@ -5,6 +5,7 @@
 2. Java 17
 3. Thymeleaf
 4. Bootstrap v.4.3.1
+5. Junit 5
 
 
 ## Setup with Intellij IDE
