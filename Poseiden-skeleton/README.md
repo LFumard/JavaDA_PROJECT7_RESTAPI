@@ -28,5 +28,5 @@
 2. Add configuration class and place in package com.nnk.springboot.config
 
 ## Add On
-1. Login User/Password Application : Admin/UserPoseidon01!
+1. Login User/Password Application : User/UserPoseidon01!
 2. Login Admin/Password Application : Admin/AdminPoseidon01!
